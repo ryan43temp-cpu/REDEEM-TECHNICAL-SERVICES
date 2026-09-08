@@ -45,6 +45,33 @@ textNodes.forEach((node) => {
   });
 });
 
+const useLocalImage = (path, applyImage) => {
+  const image = new Image();
+  image.onload = () => applyImage(path);
+  image.src = path;
+};
+
+useLocalImage('images/hero.jpg', (path) => {
+  const image = document.querySelector('.market-hero-image img');
+  if (image) image.src = path;
+});
+useLocalImage('images/road.jpg', (path) => {
+  const image = document.querySelector('.how-image img');
+  if (image) image.src = path;
+});
+useLocalImage('images/about.jpg', (path) => {
+  const image = document.querySelector('.about-image img');
+  if (image) image.src = path;
+});
+const localVehicleImages = { 'vehicle-one': 'images/porsche.jpg', 'vehicle-two': 'images/defender.jpg', 'vehicle-three': 'images/sprinter.jpg', 'vehicle-four': 'images/mustang.jpg' };
+Object.entries(localVehicleImages).forEach(([className, path]) => {
+  useLocalImage(path, (loadedPath) => {
+    document.querySelectorAll(`.${className}`).forEach((element) => {
+      element.style.backgroundImage = `url('${loadedPath}')`;
+    });
+  });
+});
+
 const vehicleIds = { 'vehicle-one': 'porsche', 'vehicle-two': 'defender', 'vehicle-three': 'sprinter', 'vehicle-four': 'mustang' };
 document.querySelectorAll('.vehicle-row').forEach((row) => {
   const photo = row.querySelector('.vehicle-photo');
