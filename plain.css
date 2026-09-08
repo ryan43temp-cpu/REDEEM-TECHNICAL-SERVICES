@@ -65,6 +65,25 @@
 .marketplace-page .contact-form h2{font-size:24px;margin:0 0 24px}
 @media(max-width:700px){.marketplace-page .contact-cards{grid-template-columns:1fr}}
 
+/* Improve readability for supporting text and card details. */
+.marketplace-page p,
+.marketplace-page small,
+.marketplace-page .section-label,
+.marketplace-page .vehicle-main p,
+.marketplace-page .vehicle-price small,
+.marketplace-page .vehicle-price span,
+.marketplace-page .contact-card p,
+.marketplace-page .contact-card small,
+.marketplace-page .detail-location,
+.marketplace-page .detail-note,
+.marketplace-page .inner-hero>p:not(.eyebrow){color:#222}
+.marketplace-page .contact-card p{font-size:12px;line-height:1.4}
+.marketplace-page .contact-card small,
+.marketplace-page .vehicle-price small,
+.marketplace-page .vehicle-price span{font-size:10px;font-weight:600}
+.marketplace-page .footer-bottom small{color:#222}
+.marketplace-page .announcement,.marketplace-page .announcement a{color:#fff}
+
 /* Keep the basic layout stable at small browser widths. */
 .marketplace-page{min-width:602px}
 .marketplace-page .contact-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
