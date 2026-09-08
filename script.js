@@ -11,6 +11,16 @@ if (document.body.classList.contains('marketplace-page')) {
   currencyStyles.rel = 'stylesheet';
   currencyStyles.href = 'currency.css';
   document.head.appendChild(currencyStyles);
+
+  const basicStyles = document.createElement('link');
+  basicStyles.rel = 'stylesheet';
+  basicStyles.href = 'basic.css';
+  document.head.appendChild(basicStyles);
+
+  const plainStyles = document.createElement('link');
+  plainStyles.rel = 'stylesheet';
+  plainStyles.href = 'plain.css';
+  document.head.appendChild(plainStyles);
 }
 
 const locationUpdates = {
